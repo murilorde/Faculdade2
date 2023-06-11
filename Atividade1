@@ -1,0 +1,29 @@
+package unis_test_cod;
+
+import javax.swing.JOptionPane;
+
+public class Imc {
+
+	public static void main(String[] args) {
+	
+		//Declaração dos inputs
+		String input = JOptionPane.showInputDialog("Digite seu peso em kg:");
+		double peso = Double.parseDouble(input);
+
+		input = JOptionPane.showInputDialog("Digite sua altura em metros: use o '.' como separador");
+		double altura = Double.parseDouble(input);
+
+		// Cálculo do IMC
+		double imc = peso / (altura * altura);
+
+		// Exibição dos resultados
+		if (imc < 19) {
+			JOptionPane.showMessageDialog(null, "Você está abaixo do peso! Seu IMC é: " + imc);
+		} else if (imc >= 19 && imc < 26) {
+			JOptionPane.showMessageDialog(null, "Você está no peso ideal! Parabéns! Seu IMC é: " + imc);
+		} else {
+			JOptionPane.showMessageDialog(null, "Você está acima do peso! Seu IMC é: " + imc);
+		}
+	}
+
+}
